@@ -1,30 +1,23 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription, interval, Observable } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-count-down',
-  template: `
-  <app-navbar></app-navbar>
-    <div class=" my-12 flex justify-center item-center">
-      <h4 class="text-5xl font-lubre font-extrabold">
-        Counting down to Musa and Musonda's wedding
+  selector: 'app-home',
+  template: ` <div class=" my-12 flex justify-center item-center">
+      <h4 class="text-2xl font-lubra font-extrabold">
+        Counting down to Muse and Musonda's wedding
       </h4>
     </div>
-    <div class="flex justify-center item-center font-bold text-4xl">
-      <div class="bg-slate-400 p-8 ">
+    <div class=" ">
       {{ daysToWDay }}
-      </div>
-      <span class=" flex p-4 item-center justify-center -mb-3 text-2xl"> Day(s)</span>
-        <span class="bg-slate-400 p-8"> {{ hoursToWDay }} </span>Hours
-        <span class="bg-slate-400 p-8"> {{ minutesToWDay }} </span>Minutes
-        <span class="bg-slate-400 p-8"> {{ secondsToWDay }} </span>Seconds
-      
-    </div>
-    
-  `,
+      <span class=""> Days</span>
+      <span class=""> {{ hoursToWDay }} </span>Hours
+      <span class=""> {{ minutesToWDay }} </span>Minutes
+      <span class=""> {{ secondsToWDay }} </span>Seconds
+    </div>`,
   styles: [],
 })
-export class CountDownComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;
 
   public dateNow = new Date();

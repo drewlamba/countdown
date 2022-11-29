@@ -2,19 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
-  template: `
-    <p>
-      gallery works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ` <p>this is the gallery page!!!!</p> `,
+  styles: [],
 })
 export class GalleryComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
